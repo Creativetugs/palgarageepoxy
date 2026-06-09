@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pal's Garage Epoxy | Strong Floors. Lasting Results.</title>
+    <!-- Tailwind CSS for modern fluid responsive utilities -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for modern UI icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter and Orbitron for industrial tech aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom configuration and styling -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDark: '#040814',
+                        brandCard: '#0d1527',
+                        brandBlue: '#1e6091',
+                        brandAccent: '#00b4d8',
+                        brandSilver: '#e2e8f0',
+                        brandGray: '#94a3b8'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Orbitron', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar matching dark metallic theme */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #040814;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e6091;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00b4d8;
+        }
+        
+        /* Interactive slider container rules */
+        .slider-container {
+            position: relative;
+            user-select: none;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.15);
+        }
+        
+        /* Neon text glow & transitions */
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(0, 180, 216, 0.6), 0 0 20px rgba(0, 180, 216, 0.2);
+        }
+        
+        /* Shimmer effect for buttons */
+        @keyframes shimmer {
+            100% { left: 125%; }
+        }
+        .btn-shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 30%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(30deg);
+            transition: none;
+        }
+        .btn-shimmer:hover::after {
+            animation: shimmer 1.2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-brandDark text-brandSilver font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 bg-brandDark/90 backdrop-blur-md border-b border-brandCard/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Logo area referencing the branding logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <img src="https://raw.githubusercontent.com/Creativetugs/images-website/refs/heads/main/paul-logo.jpg" 
+                     alt="Pal's Garage Epoxy Logo" 
+                     class="h-14 w-auto rounded-md border border-brandAccent/30 group-hover:border-brandAccent transition duration-300"
+                     onerror="this.src='https://placehold.co/100x100/151d30/ffffff?text=PGE'">
+                <div class="flex flex-col">
+                    <span class="font-tech text-lg text-white tracking-widest leading-none group-hover:text-brandAccent transition duration-300">PAL'S</span>
+                    <span class="text-[11px] text-brandAccent tracking-wider uppercase font-semibold leading-normal">Garage Epoxy</span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#home" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Home</a>
+                <a href="#branding-showcase" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Our Promise</a>
+                <a href="#gallery" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Before & After</a>
+                <a href="#estimator" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Price Estimator</a>
+                <a href="#contact" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Free Quote</a>
+            </nav>
+
+            <!-- CTA Call Button -->
+            <div class="flex items-center gap-4">
+                <a href="tel:9162566232" class="btn-shimmer flex items-center gap-2 bg-brandBlue hover:bg-brandAccent text-white px-5 py-2.5 rounded-lg font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-lg shadow-brandBlue/20">
+                    <i class="fa-solid fa-phone text-brandAccent group-hover:text-white"></i>
+                    <span class="hidden sm:inline">Call Now: </span>916 256 6232
+                </a>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden text-white hover:text-brandAccent focus:outline-none transition duration-200">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-brandCard border-t border-brandBlue/30 px-4 py-6 space-y-4">
+            <a href="#home" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Home</a>
+            <a href="#branding-showcase" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Our Promise</a>
+            <a href="#gallery" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Before & After</a>
+            <a href="#estimator" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Price Estimator</a>
+            <a href="#contact" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Free Quote</a>
+        </div>
+    </header>
+
+    <!-- Hero / Showcase Intro Section -->
+    <section id="home" class="relative min-h-[90vh] flex items-center py-16 px-4 overflow-hidden">
+        <!-- Background Ambient Glow Patterns -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-brandAccent/10 rounded-full filter blur-[120px]"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-brandBlue/20 rounded-full filter blur-[120px]"></div>
+        
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Hero Left Side Text Details -->
+            <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brandBlue/20 border border-brandAccent/30 text-xs font-semibold tracking-widest text-brandAccent uppercase">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> family-run sacramento business
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight uppercase tracking-tight">
+                    Strong Floors.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandAccent to-sky-400 neon-glow">Lasting Results.</span>
+                </h1>
+                <p class="text-base sm:text-lg text-brandGray max-w-xl mx-auto lg:mx-0">
+                    At <strong class="text-white">Pal’s Garage Epoxy</strong>, we focus on quality workmanship, attention to detail, and customer satisfaction. We take absolute pride in providing affordable epoxy flooring without cutting corners.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="btn-shimmer px-8 py-4 bg-brandAccent hover:bg-sky-400 text-brandDark font-extrabold tracking-wider uppercase rounded-xl transition-all duration-300 shadow-xl shadow-brandAccent/20">
+                        Get Your Free Quote <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#gallery" class="px-8 py-4 bg-transparent hover:bg-brandCard text-white border border-brandAccent/40 hover:border-brandAccent font-bold tracking-wider uppercase rounded-xl transition duration-300">
+                        View Transformations
+                    </a>
+                </div>
+                
+                <!-- Quick Brand Accents Grid -->
+                <div class="grid grid-cols-2 gap-4 pt-6 border-t border-brandCard max-w-md mx-auto lg:mx-0">
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-shield-halved text-brandAccent text-xl"></i>
+                        <span class="text-sm font-medium text-brandSilver">Durable & Rugged</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-droplet text-brandAccent text-xl"></i>
+                        <span class="text-sm font-medium text-brandSilver">Stain & Chemical Resistant</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-wand-magic-sparkles text-brandAccent text-xl"></i>
+                        <span class="text-sm font-medium text-brandSilver">Glossy Finish</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fa-solid fa-calendar-check text-brandAccent text-xl"></i>
+                        <span class="text-sm font-medium text-brandSilver">Weekend Bookings</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Right Side Showcase displaying image_2a1ddc.jpg -->
+            <div class="lg:col-span-6">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-brandAccent to-brandBlue rounded-2xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                    <div class="relative bg-brandCard border border-brandBlue/20 rounded-2xl p-3 overflow-hidden">
+                        <div class="text-xs text-brandGray mb-2 flex justify-between items-center px-1">
+                            <span><i class="fa-solid fa-sparkles text-brandAccent mr-1"></i> Brand Overview & Proof Banner</span>
+                            <span class="text-brandAccent">Verifiable Work</span>
+                        </div>
+                        <!-- Referencing exact required asset: image_2a1ddc.jpg -->
+                        <img src="https://raw.githubusercontent.com/Creativetugs/images-website/refs/heads/main/paul-garage.jpg" 
+                             alt="Pal's Garage Epoxy Services Showcase Banner" 
+                             class="w-full h-auto rounded-lg shadow-2xl transition-transform duration-500 hover:scale-[1.02] cursor-pointer"
+                             onclick="openLightbox('image_2a1ddc.jpg')">
+                        <p class="text-center text-xs text-brandGray mt-2 italic">
+                            Click to expand our original Sacremento, CA premium branding overview card.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before & After Interactive Sweep Section -->
+    <section id="gallery" class="py-20 px-4 bg-brandCard/50 border-y border-brandBlue/10 relative">
+        <div class="max-w-4xl mx-auto text-center space-y-4 mb-12">
+            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Interactive Viewer</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
+                Witness The Transformation
+            </h2>
+            <p class="text-brandGray max-w-xl mx-auto">
+                Drag the interactive center line handle side-to-side to compare our raw, pitted concrete work <span class="text-rose-400 font-semibold">(Before)</span> with our finished multi-flake professional epoxy coating <span class="text-emerald-400 font-semibold">(After)</span>.
+            </p>
+        </div>
+
+        <!-- Sweep Slider HTML -->
+        <div class="max-w-3xl mx-auto">
+            <div id="beforeAfterSlider" class="slider-container aspect-[16/9] w-full relative">
+                
+                <!-- After Image (Always in Background) -->
+                <img src="https://raw.githubusercontent.com/Creativetugs/images-website/refs/heads/main/after-paul.jpg" 
+                     alt="After Premium Epoxy Application" 
+                     class="absolute inset-0 w-full h-full object-cover select-none pointer-events-none"
+                     onerror="this.src='https://placehold.co/1200x675/151d30/ffffff?text=After+Epoxy'">
+                <div class="absolute bottom-4 right-4 bg-emerald-500/90 text-white font-bold text-xs tracking-wider px-3 py-1.5 rounded-md border border-emerald-400 shadow-md z-20 pointer-events-none uppercase">
+                    After Premium Flake Epoxy
+                </div>
+
+                <!-- Before Image (On top, resized by width clip or absolute width matching slider) -->
+                <div id="beforeImgContainer" class="absolute inset-y-0 left-0 overflow-hidden z-10" style="width: 50%;">
+                    <img src="https://raw.githubusercontent.com/Creativetugs/images-website/refs/heads/main/before-paul.jpg" 
+                         alt="Before Raw Concrete Garage" 
+                         class="absolute inset-0 w-[768px] h-full object-cover select-none pointer-events-none" 
+                         id="beforeImg"
+                         onerror="this.src='https://placehold.co/1200x675/0b0f19/ffffff?text=Before+Concrete'">
+                    <div class="absolute bottom-4 left-4 bg-rose-600/90 text-white font-bold text-xs tracking-wider px-3 py-1.5 rounded-md border border-rose-500 shadow-md z-20 pointer-events-none uppercase">
+                        Before (Rough Concrete)
+                    </div>
+                </div>
+
+                <!-- Interactive Sliding Handle overlay -->
+                <div id="sliderHandle" class="absolute top-0 bottom-0 z-30 w-1 bg-brandAccent cursor-ew-resize flex items-center justify-center transition-all" style="left: 50%;">
+                    <div class="w-8 h-8 rounded-full bg-brandAccent text-brandDark shadow-xl flex items-center justify-center border-2 border-white pointer-events-none">
+                        <i class="fa-solid fa-arrows-left-right text-xs"></i>
+                    </div>
+                </div>
+
+                <!-- Input Range Overlay for flawless touch screen sweep -->
+                <input type="range" min="0" max="100" value="50" 
+                       id="sliderRange" 
+                       class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-40"
+                       aria-label="Before and After Sweep Slider">
+            </div>
+            
+            <div class="mt-4 flex justify-between text-xs text-brandGray font-medium px-2">
+                <span>← Slid left to reveal Premium High-Gloss Epoxy</span>
+                <span>Slid right to reveal raw concrete pitted floor →</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Price Estimator Section -->
+    <section id="estimator" class="py-20 px-4 relative">
+        <div class="max-w-4xl mx-auto text-center space-y-4 mb-12">
+            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Instant Calculator</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
+                Configure & Estimate Your Floor
+            </h2>
+            <p class="text-brandGray max-w-xl mx-auto">
+                Pal’s believes in fair pricing without cutting corners. Select your layout to get a dynamic estimate of our professional epoxy service.
+            </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto bg-brandCard rounded-2xl border border-brandBlue/20 p-6 sm:p-10 shadow-2xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                
+                <!-- Input Controls -->
+                <div class="space-y-6">
+                    <div>
+                        <label class="block text-sm font-semibold tracking-wider text-brandSilver uppercase mb-3">1. Select Garage Layout</label>
+                        <div class="grid grid-cols-3 gap-3">
+                            <button onclick="setEstimatorSize('1car', 240)" id="btnSize1" class="estimator-size-btn p-3 rounded-lg border-2 border-brandBlue bg-brandBlue/10 hover:border-brandAccent transition duration-200 text-center text-xs font-bold flex flex-col items-center justify-center gap-2">
+                                <i class="fa-solid fa-car text-lg"></i>
+                                <span>1-Car Garage<br><span class="text-[10px] text-brandGray">(~240 sq ft)</span></span>
+                            </button>
+                            <button onclick="setEstimatorSize('2car', 480)" id="btnSize2" class="estimator-size-btn p-3 rounded-lg border-2 border-brandBlue bg-brandBlue/10 hover:border-brandAccent transition duration-200 text-center text-xs font-bold flex flex-col items-center justify-center gap-2">
+                                <div class="flex gap-1"><i class="fa-solid fa-car"></i><i class="fa-solid fa-car"></i></div>
+                                <span>2-Car Garage<br><span class="text-[10px] text-brandGray">(~480 sq ft)</span></span>
+                            </button>
+                            <button onclick="setEstimatorSize('custom', 600)" id="btnSize3" class="estimator-size-btn p-3 rounded-lg border-2 border-brandBlue bg-brandBlue/10 hover:border-brandAccent transition duration-200 text-center text-xs font-bold flex flex-col items-center justify-center gap-2">
+                                <i class="fa-solid fa-ruler-combined text-lg"></i>
+                                <span>Custom Size<br><span class="text-[10px] text-brandGray">(Per Sq Ft)</span></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Square Footage Range Slider (Shows for custom sizing) -->
+                    <div id="customSqFtWrapper" class="space-y-2">
+                        <div class="flex justify-between text-sm font-semibold uppercase text-brandSilver">
+                            <span>Adjust Area size:</span>
+                            <span class="text-brandAccent" id="sqFtValue">500 Sq Ft</span>
+                        </div>
+                        <input type="range" id="sqFtSlider" min="150" max="1500" value="500" step="25" 
+                               class="w-full accent-brandAccent bg-brandDark rounded-lg h-2 cursor-pointer"
+                               oninput="updateCustomSqFt(this.value)">
+                    </div>
+
+                    <!-- Flake / Design Selection -->
+                    <div>
+                        <label class="block text-sm font-semibold tracking-wider text-brandSilver uppercase mb-3">2. Choose Decorative Style</label>
+                        <div class="space-y-2">
+                            <label class="flex items-center gap-3 p-3 bg-brandDark rounded-lg border border-brandBlue/20 cursor-pointer hover:border-brandAccent/60 transition">
+                                <input type="radio" name="epoxyStyle" value="signature" checked onchange="updateEstimatorStyle('signature', 5.50)" class="accent-brandAccent w-4 h-4">
+                                <div class="text-xs">
+                                    <div class="font-bold text-brandSilver uppercase">Signature Heavy Flake <span class="text-[10px] bg-brandAccent/20 text-brandAccent px-2 py-0.5 rounded ml-2">Most Popular</span></div>
+                                    <span class="text-brandGray">Double-base color chip system with maximum longevity and chemical sealing.</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-brandDark rounded-lg border border-brandBlue/20 cursor-pointer hover:border-brandAccent/60 transition">
+                                <input type="radio" name="epoxyStyle" value="metallic" onchange="updateEstimatorStyle('metallic', 6.50)" class="accent-brandAccent w-4 h-4">
+                                <div class="text-xs">
+                                    <div class="font-bold text-brandSilver uppercase">Liquid Metallic Epoxy</div>
+                                    <span class="text-brandGray">Ultra high gloss, customized marbled patterns looking like cosmic fluid art.</span>
+                                </div>
+                            </label>
+                            <label class="flex items-center gap-3 p-3 bg-brandDark rounded-lg border border-brandBlue/20 cursor-pointer hover:border-brandAccent/60 transition">
+                                <input type="radio" name="epoxyStyle" value="solid" onchange="updateEstimatorStyle('solid', 4.50)" class="accent-brandAccent w-4 h-4">
+                                <div class="text-xs">
+                                    <div class="font-bold text-brandSilver uppercase">Industrial Solid Coating</div>
+                                    <span class="text-brandGray">Sleek industrial finish. Minimalistic slip-resistant surface.</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Output Estimates & CTA Cards -->
+                <div class="bg-brandDark rounded-xl border border-brandBlue/30 p-6 space-y-6 flex flex-col justify-between h-full">
+                    <div class="space-y-4">
+                        <div class="text-center pb-4 border-b border-brandCard">
+                            <span class="text-xs tracking-widest text-brandGray uppercase">Approximate Investment Range</span>
+                            <div class="text-3xl sm:text-4xl font-tech text-white uppercase tracking-tight mt-2" id="estimatedPrice">
+                                $2,640 - $3,120
+                            </div>
+                            <span class="text-[10px] text-brandAccent italic">Estimates include all cleaning, repair, primer, & UV-stable polyaspartic topcoat!</span>
+                        </div>
+                        
+                        <div class="space-y-2 text-xs">
+                            <div class="flex justify-between">
+                                <span class="text-brandGray">Selected Area:</span>
+                                <span id="estimateAreaText" class="text-white font-bold">480 Sq Ft</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-brandGray">Preparation Method:</span>
+                                <span class="text-white font-bold">Diamond Grinding / Shot Blasting</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-brandGray">Epoxy Type:</span>
+                                <span id="estimateStyleText" class="text-white font-bold">Signature Heavy Flake</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-brandGray">Est. Duration:</span>
+                                <span class="text-white font-bold">1 - 2 Days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 space-y-3">
+                        <p class="text-center text-xs text-brandGray leading-relaxed">
+                            Need a certified exact quote? We offer <strong class="text-brandAccent">100% Free In-Person Evaluations</strong> in the Sacramento metro region.
+                        </p>
+                        <button onclick="applyEstimateToForm()" class="btn-shimmer w-full bg-brandAccent hover:bg-sky-400 text-brandDark font-bold py-3.5 px-4 rounded-lg tracking-wider uppercase text-xs transition duration-200">
+                            Apply Estimate & Inquire Now <i class="fa-solid fa-arrow-turn-down ml-1"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Value & Video Highlight Section -->
+    <section class="py-20 px-4 bg-brandCard/30 border-t border-brandBlue/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Quality work principles info card -->
+            <div class="lg:col-span-6 space-y-6">
+                <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Pal's Guarantee</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
+                    One Job At A Time. Best Results.
+                </h2>
+                <p class="text-brandGray">
+                    We treat every garage like it’s our own. Because we work as a tight-knit team, we focus entirely on your site. Unlike franchises that rush through multiple bookings simultaneously, we stay until your slab is perfectly prepped, ground, filled, sealed, and top-coated.
+                </p>
+
+                <div class="space-y-4">
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-brandBlue/30 text-brandAccent flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white uppercase text-sm">Sacramento Local Expertise</h4>
+                            <p class="text-xs text-brandGray">Fully customizable styling to handle regional temperature swings with maximum structural bonding.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 items-start">
+                        <div class="w-10 h-10 rounded-lg bg-brandBlue/30 text-brandAccent flex items-center justify-center shrink-0">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-white uppercase text-sm">Industrial Grade Resins</h4>
+                            <p class="text-xs text-brandGray">No retail paint store dilutions. We utilize heavy, non-volatile chemical blends built to withstand heavy tire loads and floor jacks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video embed / Facebook page callout card -->
+            <div class="lg:col-span-6">
+                <div class="bg-brandCard border border-brandBlue/20 rounded-2xl p-6 sm:p-8 space-y-6 text-center relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-brandBlue/20 rounded-full filter blur-xl"></div>
+                    
+                    <div class="w-16 h-16 bg-[#1877f2]/20 text-[#1877f2] rounded-full flex items-center justify-center mx-auto text-3xl">
+                        <i class="fa-brands fa-facebook"></i>
+                    </div>
+
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold uppercase text-white">Watch Our Process Video</h3>
+                        <p class="text-sm text-brandGray max-w-sm mx-auto">
+                            See how we take a stained, worn concrete slab and turn it into a beautiful custom showpiece floor. Watch our process video!
+                        </p>
+                    </div>
+
+                    <!-- Click to open video portal -->
+                    <div class="pt-4">
+                        <a href="https://www.facebook.com/reel/996884813078776" target="_blank" 
+                           class="btn-shimmer inline-flex items-center gap-3 bg-[#1877f2] hover:bg-blue-600 text-white font-bold py-4 px-8 rounded-xl tracking-wider uppercase text-sm transition shadow-lg shadow-blue-600/25">
+                            <i class="fa-solid fa-circle-play text-lg"></i> Watch Process Reel
+                        </a>
+                    </div>
+
+                    <div class="text-xs text-brandGray">
+                        Follow us on Facebook at <br>
+                        <a href="https://www.facebook.com/profile.php?id=61590933020392" target="_blank" class="text-brandAccent hover:underline font-semibold">
+                            Pal's Garage Epoxy Profile <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking & Lead Capture Section -->
+    <section id="contact" class="py-20 px-4 relative">
+        <div class="max-w-4xl mx-auto text-center space-y-4 mb-12">
+            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Secure Your Slot</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
+                Get Your Free In-Person Estimate
+            </h2>
+            <p class="text-brandGray max-w-xl mx-auto">
+                No obligations. Enter your details below, and one of our family founders will reach out to schedule an absolute free measuring & flake design assessment!
+            </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto bg-brandCard rounded-2xl border border-brandBlue/30 p-6 sm:p-10 shadow-2xl relative">
+            <div id="formSuccessAlert" class="hidden absolute inset-0 bg-brandCard rounded-2xl z-50 flex flex-col items-center justify-center p-8 text-center space-y-4">
+                <div class="w-16 h-16 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center text-3xl animate-bounce">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3 class="text-2xl font-bold uppercase text-white">Request Received!</h3>
+                <p class="text-brandGray max-w-md">
+                    Thank you for reaching out to Pal's Garage Epoxy! We will review your garage specs and follow up by phone within <span class="text-brandAccent font-bold">24 business hours</span> to coordinate your free inspection visit.
+                </p>
+                <button onclick="resetLeadForm()" class="px-6 py-2.5 bg-brandBlue hover:bg-brandAccent text-white font-bold rounded-lg uppercase tracking-wider text-xs transition">
+                    Submit Another Inquiry
+                </button>
+            </div>
+
+            <form id="leadCaptureForm" onsubmit="handleFormSubmission(event)" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="form_name" class="block text-xs font-semibold tracking-wider text-brandGray uppercase mb-2">Your Full Name <span class="text-brandAccent">*</span></label>
+                        <input type="text" id="form_name" required placeholder="Paul Smith" 
+                               class="w-full bg-brandDark border border-brandBlue/30 focus:border-brandAccent rounded-lg py-3 px-4 text-white placeholder-brandGray outline-none transition">
+                    </div>
+                    <div>
+                        <label for="form_phone" class="block text-xs font-semibold tracking-wider text-brandGray uppercase mb-2">Phone Number <span class="text-brandAccent">*</span></label>
+                        <input type="tel" id="form_phone" required placeholder="(916) 555-0199" 
+                               class="w-full bg-brandDark border border-brandBlue/30 focus:border-brandAccent rounded-lg py-3 px-4 text-white placeholder-brandGray outline-none transition">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label for="form_email" class="block text-xs font-semibold tracking-wider text-brandGray uppercase mb-2">Email Address (Optional)</label>
+                        <input type="email" id="form_email" placeholder="paul@example.com" 
+                               class="w-full bg-brandDark border border-brandBlue/30 focus:border-brandAccent rounded-lg py-3 px-4 text-white placeholder-brandGray outline-none transition">
+                    </div>
+                    <div>
+                        <label for="form_garage" class="block text-xs font-semibold tracking-wider text-brandGray uppercase mb-2">Garage Layout & Size</label>
+                        <select id="form_garage" class="w-full bg-brandDark border border-brandBlue/30 focus:border-brandAccent rounded-lg py-3 px-4 text-white outline-none transition">
+                            <option value="1car">1-Car Garage (~240 sq ft)</option>
+                            <option value="2car" selected>2-Car Garage (~480 sq ft)</option>
+                            <option value="3car">3-Car Garage (~720 sq ft)</option>
+                            <option value="custom">Other / Commercial custom size</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="form_style" class="block text-xs font-semibold tracking-wider text-brandGray uppercase mb-2">Preferred Epoxy Design Theme</label>
+                    <select id="form_style" class="w-full bg-brandDark border border-brandBlue/30 focus:border-brandAccent rounded-lg py-3 px-4 text-white outline-none transition">
+                        <option value="signature">Signature Heavy Flake (Best durability)</option>
+                        <option value="metallic">Liquid Metallic Epoxy (Marbled styling)</option>
+                        <option value="solid">Solid Industrial Gray/Toned Epoxy</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="form_message" class="block text-xs font-semibold tracking-wider text-brandGray uppercase mb-2">Special Details or Floor Condition Notes</label>
+                    <textarea id="form_message" rows="4" placeholder="Let us know if your floor currently has existing paint, old failing sealer, deep cracks, or special timeline requests..." 
+                              class="w-full bg-brandDark border border-brandBlue/30 focus:border-brandAccent rounded-lg py-3 px-4 text-white placeholder-brandGray outline-none transition"></textarea>
+                </div>
+
+                <!-- Custom price sync alert banner in form -->
+                <div id="formEstimateAlert" class="hidden flex items-center gap-3 p-4 bg-brandBlue/20 border border-brandAccent/40 rounded-lg text-xs">
+                    <i class="fa-solid fa-circle-info text-brandAccent text-lg shrink-0"></i>
+                    <div>
+                        <span class="font-bold text-white uppercase">Linked Estimate:</span> Your chosen estimate of <span id="formLinkedPrice" class="text-brandAccent font-bold"></span> has been appended. We will verify the dimensions on-site to give you our final absolute pricing.
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <button type="submit" class="btn-shimmer w-full bg-brandAccent hover:bg-sky-400 text-brandDark font-extrabold py-4 px-6 rounded-xl tracking-widest uppercase transition duration-200 text-sm shadow-xl shadow-brandAccent/20">
+                        Submit Free Quote Request <i class="fa-solid fa-paper-plane ml-2"></i>
+                    </button>
+                </div>
+
+                <div class="text-center text-[11px] text-brandGray leading-relaxed">
+                    By submitting, you agree to receive a brief follow-up call from Pal's Garage Epoxy to finalize booking details. We never spam.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Brand Footer -->
+    <footer class="bg-[#02050c] border-t border-brandBlue/10 pt-16 pb-8 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-12">
+            
+            <!-- Left Grid: Brand -->
+            <div class="md:col-span-5 space-y-4">
+                <div class="flex items-center gap-3">
+                    <img src="https://raw.githubusercontent.com/Creativetugs/images-website/refs/heads/main/paul-logo.jpg" 
+                         alt="Pal's Garage Epoxy Logo" 
+                         class="h-14 w-auto rounded border border-brandAccent/30"
+                         onerror="this.src='https://placehold.co/100x100/151d30/ffffff?text=PGE'">
+                    <div class="flex flex-col">
+                        <span class="font-tech text-lg text-white tracking-widest leading-none">PAL'S</span>
+                        <span class="text-[11px] text-brandAccent tracking-wider uppercase font-semibold">Garage Epoxy</span>
+                    </div>
+                </div>
+                <p class="text-sm text-brandGray leading-relaxed max-w-sm">
+                    At Pal's Garage Epoxy, we treat every floor like our own. Family-run, detail-oriented, and focused on top-tier residential transformations.
+                </p>
+                <div class="flex items-center gap-4 text-brandGray text-lg pt-2">
+                    <a href="https://www.facebook.com/profile.php?id=61590933020392" target="_blank" class="hover:text-brandAccent transition duration-200" aria-label="Follow Pal's Garage Epoxy on Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Middle Grid: Quick Links -->
+            <div class="md:col-span-3 space-y-4">
+                <h4 class="font-tech text-white text-sm tracking-wider uppercase">Navigate</h4>
+                <ul class="space-y-2 text-sm text-brandGray">
+                    <li><a href="#home" class="hover:text-brandAccent transition">Home</a></li>
+                    <li><a href="#branding-showcase" class="hover:text-brandAccent transition">Our Promise</a></li>
+                    <li><a href="#gallery" class="hover:text-brandAccent transition">Transforms Gallery</a></li>
+                    <li><a href="#estimator" class="hover:text-brandAccent transition">Pricing Calculator</a></li>
+                    <li><a href="#contact" class="hover:text-brandAccent transition">Book Estimate</a></li>
+                </ul>
+            </div>
+
+            <!-- Right Grid: Verified Contact info -->
+            <div class="md:col-span-4 space-y-4">
+                <h4 class="font-tech text-white text-sm tracking-wider uppercase">Connect Directly</h4>
+                <div class="space-y-3 text-sm text-brandGray">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-brandAccent mt-0.5 shrink-0"></i>
+                        <div>
+                            <span class="block text-white font-bold">Phone Support:</span>
+                            <a href="tel:9162566232" class="hover:text-brandAccent transition">916 256 6232</a>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-brandAccent mt-0.5 shrink-0"></i>
+                        <div>
+                            <span class="block text-white font-bold">Service Location:</span>
+                            <span>Sacramento, CA metro area</span>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-clock text-brandAccent mt-0.5 shrink-0"></i>
+                        <div>
+                            <span class="block text-white font-bold">Business Booking Hours:</span>
+                            <span>Weekend & Weekday appointments available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="max-w-7xl mx-auto pt-8 border-t border-brandBlue/10 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-brandGray">
+            <p>&copy; 2026 Pal’s Garage Epoxy. All Rights Reserved.</p>
+            <p class="flex items-center gap-1">
+                Made with pride for Sacramento homeowners <i class="fa-solid fa-heart text-rose-500 animate-pulse"></i>
+            </p>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX / EXPAND VIEW COMPONENT -->
+    <div id="lightbox" class="hidden fixed inset-0 z-50 bg-black/95 flex items-center justify-center p-4 transition-all duration-300">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white hover:text-brandAccent text-3xl focus:outline-none" aria-label="Close Lightbox">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <div class="max-w-5xl max-h-[85vh] overflow-hidden rounded-xl border border-brandBlue/30 relative">
+            <img id="lightboxImg" src="" alt="Expanded View" class="max-w-full max-h-[80vh] object-contain">
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        // DOM Elements
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightboxImg');
+        const beforeAfterSlider = document.getElementById('beforeAfterSlider');
+        const beforeImgContainer = document.getElementById('beforeImgContainer');
+        const beforeImg = document.getElementById('beforeImg');
+        const sliderHandle = document.getElementById('sliderHandle');
+        const sliderRange = document.getElementById('sliderRange');
+        
+        // Active Estimator State Data Variables
+        let activeGarageType = '2car';
+        let activeSqFtPrice = 5.50; // default for Signature Flake
+        let customSqFt = 500;
+
+        // Toggle mobile navbar menu
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on anchor click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Lightbox Utility Actions
+        function openLightbox(imgSrc) {
+            lightboxImg.src = imgSrc;
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeLightbox() {
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Before & After Interactive Swipe Controls
+        function initBeforeAfterSlider() {
+            // Function to align the widths matching container sizes
+            function updateSliderPosition(percent) {
+                // Bounds safety check
+                if(percent < 0) percent = 0;
+                if(percent > 100) percent = 100;
+
+                // Adjust clip overlay
+                beforeImgContainer.style.width = `${percent}%`;
+                sliderHandle.style.left = `${percent}%`;
+            }
+
+            // Sync dynamic dimensions on resize
+            function resizeBeforeImg() {
+                const containerWidth = beforeAfterSlider.offsetWidth;
+                beforeImg.style.width = `${containerWidth}px`;
+            }
+
+            // Track range inputs
+            sliderRange.addEventListener('input', (e) => {
+                updateSliderPosition(e.target.value);
+            });
+
+            // Handle touch swipes & mouse scrolls smoothly
+            window.addEventListener('resize', resizeBeforeImg);
+            resizeBeforeImg();
+        }
+
+        // Estimator Calculations Logic
+        function updateEstimatorUI() {
+            let totalSqFt = 0;
+            let displayStyleName = "Signature Heavy Flake";
+
+            // Determine accurate base style text name
+            const selectedRadio = document.querySelector('input[name="epoxyStyle"]:checked');
+            if(selectedRadio) {
+                if(selectedRadio.value === 'signature') displayStyleName = "Signature Heavy Flake";
+                else if(selectedRadio.value === 'metallic') displayStyleName = "Liquid Metallic Epoxy";
+                else if(selectedRadio.value === 'solid') displayStyleName = "Industrial Solid Coating";
+            }
+
+            // Set size properties
+            if (activeGarageType === '1car') {
+                totalSqFt = 240;
+                document.getElementById('customSqFtWrapper').classList.add('hidden');
+            } else if (activeGarageType === '2car') {
+                totalSqFt = 480;
+                document.getElementById('customSqFtWrapper').classList.add('hidden');
+            } else {
+                totalSqFt = customSqFt;
+                document.getElementById('customSqFtWrapper').classList.remove('hidden');
+            }
+
+            // Calculations based on pricing structures
+            const calculatedTotal = totalSqFt * activeSqFtPrice;
+            // Introduce pricing safety margin bounds
+            const lowerBound = Math.round((calculatedTotal * 0.95) / 10) * 10;
+            const upperBound = Math.round((calculatedTotal * 1.08) / 10) * 10;
+
+            // Render calculations
+            document.getElementById('sqFtValue').innerText = `${totalSqFt} Sq Ft`;
+            document.getElementById('estimatedPrice').innerText = `$${lowerBound.toLocaleString()} - $${upperBound.toLocaleString()}`;
+            document.getElementById('estimateAreaText').innerText = `${totalSqFt} Sq Ft`;
+            document.getElementById('estimateStyleText').innerText = displayStyleName;
+        }
+
+        function setEstimatorSize(type, defaultSqFt) {
+            activeGarageType = type;
+            
+            // Toggle visually active sizing cards
+            document.querySelectorAll('.estimator-size-btn').forEach(btn => {
+                btn.classList.remove('border-brandAccent', 'bg-brandAccent/20');
+                btn.classList.add('border-brandBlue', 'bg-brandBlue/10');
+            });
+
+            if(type === '1car') {
+                document.getElementById('btnSize1').classList.add('border-brandAccent', 'bg-brandAccent/20');
+            } else if(type === '2car') {
+                document.getElementById('btnSize2').classList.add('border-brandAccent', 'bg-brandAccent/20');
+            } else {
+                document.getElementById('btnSize3').classList.add('border-brandAccent', 'bg-brandAccent/20');
+                customSqFt = defaultSqFt;
+                document.getElementById('sqFtSlider').value = defaultSqFt;
+            }
+
+            updateEstimatorUI();
+        }
+
+        function updateCustomSqFt(val) {
+            customSqFt = parseInt(val);
+            updateEstimatorUI();
+        }
+
+        function updateEstimatorStyle(styleValue, multiplier) {
+            activeSqFtPrice = multiplier;
+            updateEstimatorUI();
+        }
+
+        // Apply estimator configs right down to lead forms
+        function applyEstimateToForm() {
+            const pricingRangeText = document.getElementById('estimatedPrice').innerText;
+            const sizeOption = document.getElementById('form_garage');
+            const styleOption = document.getElementById('form_style');
+            
+            // Match select menus
+            if(activeGarageType === '1car') sizeOption.value = '1car';
+            else if(activeGarageType === '2car') sizeOption.value = '2car';
+            else sizeOption.value = 'custom';
+
+            const selectedRadio = document.querySelector('input[name="epoxyStyle"]:checked');
+            if(selectedRadio) {
+                styleOption.value = selectedRadio.value;
+            }
+
+            // Output visual alert attached directly to form inputs
+            document.getElementById('formLinkedPrice').innerText = pricingRangeText;
+            document.getElementById('formEstimateAlert').classList.remove('hidden');
+
+            // Autoscroll viewport smoothly down to contact segment
+            const targetElement = document.getElementById('contact');
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Lead capture Form Actions
+        function handleFormSubmission(event) {
+            event.preventDefault();
+            
+            // Simulate safe lead routing processes
+            const clientName = document.getElementById('form_name').value;
+            const clientPhone = document.getElementById('form_phone').value;
+            
+            if(!clientName || !clientPhone) return;
+
+            // Render success panel overlay on valid form submittal
+            document.getElementById('formSuccessAlert').classList.remove('hidden');
+        }
+
+        function resetLeadForm() {
+            document.getElementById('leadCaptureForm').reset();
+            document.getElementById('formSuccessAlert').classList.add('hidden');
+            document.getElementById('formEstimateAlert').classList.add('hidden');
+        }
+
+        // Run setup immediately on system load
+        window.onload = function() {
+            initBeforeAfterSlider();
+            setEstimatorSize('2car', 480);
+        };
+    </script>
+</body>
+</html>
