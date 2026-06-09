@@ -105,40 +105,47 @@
             </a>
 
             <!-- Desktop Links -->
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="#home" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Home</a>
-                <a href="#branding-showcase" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Our Promise</a>
-                <a href="#gallery" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Before & After</a>
-                <a href="#estimator" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Price Estimator</a>
-                <a href="#contact" class="text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Free Quote</a>
+            <nav class="hidden lg:flex items-center gap-6 xl:gap-8">
+                <a href="#home" class="text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Home</a>
+                <a href="#reviews" class="text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Reviews</a>
+                <a href="#gallery" class="text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Transformations</a>
+                <a href="#projects" class="text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Our Styles</a>
+                <a href="#service-areas" class="text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Service Areas</a>
+                <a href="#estimator" class="text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Estimator</a>
+                <a href="#seo-hub" class="text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">Guides</a>
+                <a href="#faqs" class="text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent transition duration-200">FAQs</a>
             </nav>
 
             <!-- CTA Call Button -->
             <div class="flex items-center gap-4">
-                <a href="tel:9162566232" class="btn-shimmer flex items-center gap-2 bg-brandBlue hover:bg-brandAccent text-white px-5 py-2.5 rounded-lg font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-lg shadow-brandBlue/20">
+                <a href="tel:9162566232" class="btn-shimmer flex items-center gap-2 bg-brandBlue hover:bg-brandAccent text-white px-4 py-2 sm:px-5 sm:py-2.5 rounded-lg font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-300 shadow-lg shadow-brandBlue/20">
                     <i class="fa-solid fa-phone text-brandAccent group-hover:text-white"></i>
                     <span class="hidden sm:inline">Call Now: </span>916 256 6232
                 </a>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobileMenuBtn" class="md:hidden text-white hover:text-brandAccent focus:outline-none transition duration-200">
+                <button id="mobileMenuBtn" class="lg:hidden text-white hover:text-brandAccent focus:outline-none transition duration-200">
                     <i class="fa-solid fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-brandCard border-t border-brandBlue/30 px-4 py-6 space-y-4">
-            <a href="#home" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Home</a>
-            <a href="#branding-showcase" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Our Promise</a>
-            <a href="#gallery" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Before & After</a>
-            <a href="#estimator" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Price Estimator</a>
-            <a href="#contact" class="block text-sm font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Free Quote</a>
+        <div id="mobileMenu" class="hidden lg:hidden bg-brandCard border-t border-brandBlue/30 px-4 py-6 space-y-3">
+            <a href="#home" class="block text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2 border-b border-brandDark">Home</a>
+            <a href="#reviews" class="block text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2 border-b border-brandDark">Reviews</a>
+            <a href="#gallery" class="block text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2 border-b border-brandDark">Transformations</a>
+            <a href="#projects" class="block text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2 border-b border-brandDark">Our Styles</a>
+            <a href="#service-areas" class="block text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2 border-b border-brandDark">Service Areas</a>
+            <a href="#estimator" class="block text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2 border-b border-brandDark">Price Estimator</a>
+            <a href="#seo-hub" class="block text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2 border-b border-brandDark">Guides & Resources</a>
+            <a href="#faqs" class="block text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2 border-b border-brandDark">FAQs</a>
+            <a href="#contact" class="block text-xs font-semibold tracking-wider uppercase text-brandSilver hover:text-brandAccent py-2">Free Quote</a>
         </div>
     </header>
 
     <!-- Hero / Showcase Intro Section -->
-    <section id="home" class="relative min-h-[90vh] flex items-center py-16 px-4 overflow-hidden">
+    <section id="home" class="relative min-h-[85vh] flex items-center py-12 px-4 overflow-hidden">
         <!-- Background Ambient Glow Patterns -->
         <div class="absolute -top-40 -left-40 w-96 h-96 bg-brandAccent/10 rounded-full filter blur-[120px]"></div>
         <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-brandBlue/20 rounded-full filter blur-[120px]"></div>
@@ -193,15 +200,15 @@
                     <div class="relative bg-brandCard border border-brandBlue/20 rounded-2xl p-3 overflow-hidden">
                         <div class="text-xs text-brandGray mb-2 flex justify-between items-center px-1">
                             <span><i class="fa-solid fa-sparkles text-brandAccent mr-1"></i> Brand Overview & Proof Banner</span>
-                            <span class="text-brandAccent">Verifiable Work</span>
+                            <span class="text-brandAccent font-semibold">Verifiable Work</span>
                         </div>
                         <!-- Referencing exact required asset: image_2a1ddc.jpg -->
                         <img src="https://raw.githubusercontent.com/Creativetugs/images-website/refs/heads/main/paul-garage.jpg" 
                              alt="Pal's Garage Epoxy Services Showcase Banner" 
-                             class="w-full h-auto rounded-lg shadow-2xl transition-transform duration-500 hover:scale-[1.02] cursor-pointer"
+                             class="w-full h-auto rounded-lg shadow-2xl transition-transform duration-500 hover:scale-[1.01] cursor-pointer"
                              onclick="openLightbox('image_2a1ddc.jpg')">
-                        <p class="text-center text-xs text-brandGray mt-2 italic">
-                            Click to expand our original Sacremento, CA premium branding overview card.
+                        <p class="text-center text-[11px] text-brandGray mt-2 italic">
+                            Click to expand our original Sacramento, CA premium branding overview card.
                         </p>
                     </div>
                 </div>
@@ -209,8 +216,149 @@
         </div>
     </section>
 
+    <!-- Trust Badges Section -->
+    <section class="border-y border-brandBlue/20 bg-brandCard/40 py-8 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            <div class="flex flex-col items-center justify-center p-4 border-r border-brandBlue/10 last:border-0">
+                <div class="w-12 h-12 rounded-full bg-brandBlue/20 text-brandAccent flex items-center justify-center text-xl mb-3 shadow-md shadow-brandAccent/10">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <h4 class="font-tech text-sm text-white uppercase tracking-wider">Licensed & Insured</h4>
+                <p class="text-[11px] text-brandGray mt-1">Full regional coverage & liability protection</p>
+            </div>
+            <div class="flex flex-col items-center justify-center p-4 border-r border-brandBlue/10 last:border-0">
+                <div class="w-12 h-12 rounded-full bg-brandBlue/20 text-brandAccent flex items-center justify-center text-xl mb-3 shadow-md shadow-brandAccent/10">
+                    <i class="fa-solid fa-people-roof"></i>
+                </div>
+                <h4 class="font-tech text-sm text-white uppercase tracking-wider">Family Owned</h4>
+                <p class="text-[11px] text-brandGray mt-1">Direct community pride & honest rates</p>
+            </div>
+            <div class="flex flex-col items-center justify-center p-4 border-r border-brandBlue/10 last:border-0">
+                <div class="w-12 h-12 rounded-full bg-brandBlue/20 text-brandAccent flex items-center justify-center text-xl mb-3 shadow-md shadow-brandAccent/10">
+                    <i class="fa-solid fa-calculator"></i>
+                </div>
+                <h4 class="font-tech text-sm text-white uppercase tracking-wider">Free Estimates</h4>
+                <p class="text-[11px] text-brandGray mt-1">100% upfront pricing with zero catch</p>
+            </div>
+            <div class="flex flex-col items-center justify-center p-4 last:border-0">
+                <div class="w-12 h-12 rounded-full bg-brandBlue/20 text-brandAccent flex items-center justify-center text-xl mb-3 shadow-md shadow-brandAccent/10">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <h4 class="font-tech text-sm text-white uppercase tracking-wider">Warranty Included</h4>
+                <p class="text-[11px] text-brandGray mt-1">Written guarantee against peeling & flaking</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews / Social Proof Section (Near Top) -->
+    <section id="reviews" class="py-16 px-4 relative max-w-7xl mx-auto">
+        <div class="text-center space-y-3 mb-10">
+            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Social Proof & Reviews</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
+                Backed By 5-Star Reviews
+            </h2>
+            <div class="flex items-center justify-center gap-2">
+                <div class="flex text-amber-400">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <span class="text-sm font-bold text-white">4.9 / 5.0 Google Rating</span>
+                <span class="text-xs text-brandGray">(Over 45+ Local Reviews)</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Review 1 -->
+            <div class="bg-brandCard border border-brandBlue/20 rounded-xl p-6 flex flex-col justify-between hover:border-brandAccent/40 transition duration-300">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[10px] text-brandGray flex items-center gap-1">
+                            <i class="fa-brands fa-google text-red-400"></i> Verified Customer
+                        </span>
+                    </div>
+                    <p class="text-xs text-brandSilver italic leading-relaxed">
+                        "Pal's epoxy crew turned our messy, cracked two-car garage floor in Roseville into a brilliant showroom! The silver flake looks fantastic and wipes down effortlessly when tools drop. Highly recommend!"
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-brandDark mt-4">
+                    <div class="w-8 h-8 rounded-full bg-brandAccent/20 flex items-center justify-center text-xs font-bold text-brandAccent">MD</div>
+                    <div>
+                        <span class="block text-xs font-bold text-white">Marcus D.</span>
+                        <span class="text-[9px] text-brandAccent uppercase tracking-widest">Roseville Resident</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-brandCard border border-brandBlue/20 rounded-xl p-6 flex flex-col justify-between hover:border-brandAccent/40 transition duration-300">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[10px] text-brandGray flex items-center gap-1">
+                            <i class="fa-brands fa-google text-red-400"></i> Verified Customer
+                        </span>
+                    </div>
+                    <p class="text-xs text-brandSilver italic leading-relaxed">
+                        "Outstanding family-run business. Paul walked me through the diamond grinding prep steps and recommended the Signature Gray Flake. Zero pressure, fair price, and they were finished in just under 2 days."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-brandDark mt-4">
+                    <div class="w-8 h-8 rounded-full bg-brandAccent/20 flex items-center justify-center text-xs font-bold text-brandAccent">TL</div>
+                    <div>
+                        <span class="block text-xs font-bold text-white">Tiffany L.</span>
+                        <span class="text-[9px] text-brandAccent uppercase tracking-widest">Elk Grove Resident</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-brandCard border border-brandBlue/20 rounded-xl p-6 flex flex-col justify-between hover:border-brandAccent/40 transition duration-300">
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <span class="text-[10px] text-brandGray flex items-center gap-1">
+                            <i class="fa-brands fa-google text-red-400"></i> Verified Customer
+                        </span>
+                    </div>
+                    <p class="text-xs text-brandSilver italic leading-relaxed">
+                        "I had deep pits and oil stains all over my concrete slab in Citrus Heights. They patched everything up and laid an epoxy shell so tough I've already parked my heavy trucks on it with no marks!"
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-brandDark mt-4">
+                    <div class="w-8 h-8 rounded-full bg-brandAccent/20 flex items-center justify-center text-xs font-bold text-brandAccent">RK</div>
+                    <div>
+                        <span class="block text-xs font-bold text-white">Richard K.</span>
+                        <span class="text-[9px] text-brandAccent uppercase tracking-widest">Citrus Heights Resident</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Before & After Interactive Sweep Section -->
-    <section id="gallery" class="py-20 px-4 bg-brandCard/50 border-y border-brandBlue/10 relative">
+    <section id="gallery" class="py-16 px-4 bg-brandCard/50 border-y border-brandBlue/10 relative">
         <div class="max-w-4xl mx-auto text-center space-y-4 mb-12">
             <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Interactive Viewer</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
@@ -267,10 +415,218 @@
         </div>
     </section>
 
+    <!-- Project Gallery Section -->
+    <section id="projects" class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="text-center space-y-4 mb-12">
+            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Completed Portfolios</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
+                Custom Garage Floor Styles
+            </h2>
+            <p class="text-brandGray max-w-xl mx-auto">
+                Explore our recent applications across our 8 high-performance decorative colors. Click any item to enlarge and view style details.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Gallery Item 1 -->
+            <div class="group bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden cursor-pointer hover:border-brandAccent transition duration-300"
+                 onclick="openLightbox('https://raw.githubusercontent.com/Creativetugs/images-website/refs/heads/main/after-paul.jpg')">
+                <div class="relative overflow-hidden aspect-[4/3]">
+                    <img src="https://raw.githubusercontent.com/Creativetugs/images-website/refs/heads/main/after-paul.jpg" alt="Signature Granite Flake Floor" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brandAccent text-brandDark text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wider">Signature Slate</span>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Granite Gray Flake</h4>
+                    <p class="text-xs text-brandGray mt-1">Multi-blend decorative quartz chip base. Our #1 seller.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="group bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden cursor-pointer hover:border-brandAccent transition duration-300"
+                 onclick="openLightbox('https://placehold.co/800x600/0d1527/00b4d8?text=Cobalt+Marble')">
+                <div class="relative overflow-hidden aspect-[4/3]">
+                    <img src="https://placehold.co/800x600/0d1527/00b4d8?text=Cobalt+Blue+Flake" alt="Cobalt Blue Flake Epoxy" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brandAccent text-brandDark text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wider">Premium Flake</span>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Cobalt Blue Metallic</h4>
+                    <p class="text-xs text-brandGray mt-1">Rich deep blue and metallic slate highlight blend.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="group bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden cursor-pointer hover:border-brandAccent transition duration-300"
+                 onclick="openLightbox('https://placehold.co/800x600/0d1527/00b4d8?text=Desert+Sand')">
+                <div class="relative overflow-hidden aspect-[4/3]">
+                    <img src="https://placehold.co/800x600/0d1527/00b4d8?text=Desert+Tan+Epoxy" alt="Desert Tan Flake" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brandAccent text-brandDark text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wider">Warm Tones</span>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Desert Sand Microflake</h4>
+                    <p class="text-xs text-brandGray mt-1">Warm beige and copper tones ideal for modern homes.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="group bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden cursor-pointer hover:border-brandAccent transition duration-300"
+                 onclick="openLightbox('https://placehold.co/800x600/0d1527/00b4d8?text=Carbon+Gloss')">
+                <div class="relative overflow-hidden aspect-[4/3]">
+                    <img src="https://placehold.co/800x600/0d1527/00b4d8?text=Carbon+Fiber+Grey" alt="Carbon Fiber Grey Epoxy" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brandAccent text-brandDark text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wider">Dark Custom</span>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Carbon Gloss Metallic</h4>
+                    <p class="text-xs text-brandGray mt-1">Industrial grey marble pattern designed for tool shops.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="group bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden cursor-pointer hover:border-brandAccent transition duration-300"
+                 onclick="openLightbox('https://placehold.co/800x600/0d1527/00b4d8?text=Titanium+Slab')">
+                <div class="relative overflow-hidden aspect-[4/3]">
+                    <img src="https://placehold.co/800x600/0d1527/00b4d8?text=Titanium+Core+Epoxy" alt="Titanium Core Epoxy" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brandAccent text-brandDark text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wider">High Tech</span>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Titanium Core Solid</h4>
+                    <p class="text-xs text-brandGray mt-1">Sleek industrial finish. Minimalistic slip-resistant surface.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="group bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden cursor-pointer hover:border-brandAccent transition duration-300"
+                 onclick="openLightbox('https://placehold.co/800x600/0d1527/00b4d8?text=Emerald+Mica')">
+                <div class="relative overflow-hidden aspect-[4/3]">
+                    <img src="https://placehold.co/800x600/0d1527/00b4d8?text=Emerald+Mica+Coating" alt="Emerald Mica Coating" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brandAccent text-brandDark text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wider">Bold Slate</span>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Emerald Glaze Quartz</h4>
+                    <p class="text-xs text-brandGray mt-1">Intricate quartz blend offering heavy slip resistance.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 7 -->
+            <div class="group bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden cursor-pointer hover:border-brandAccent transition duration-300"
+                 onclick="openLightbox('https://placehold.co/800x600/0d1527/00b4d8?text=Royal+Quartz')">
+                <div class="relative overflow-hidden aspect-[4/3]">
+                    <img src="https://placehold.co/800x600/0d1527/00b4d8?text=Royal+Quartz+Flake" alt="Royal Quartz Flake" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brandAccent text-brandDark text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wider">Heavy Duty</span>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Royal Quartz Slate</h4>
+                    <p class="text-xs text-brandGray mt-1">Designed specifically to withstand extreme heavy duty truck loads.</p>
+                </div>
+            </div>
+
+            <!-- Gallery Item 8 -->
+            <div class="group bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden cursor-pointer hover:border-brandAccent transition duration-300"
+                 onclick="openLightbox('https://placehold.co/800x600/0d1527/00b4d8?text=Pearl+White+Flake')">
+                <div class="relative overflow-hidden aspect-[4/3]">
+                    <img src="https://placehold.co/800x600/0d1527/00b4d8?text=Pearl+White+Flake" alt="Pearl Sand Flake" 
+                         class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 right-3 bg-brandAccent text-brandDark text-[9px] font-bold px-2 py-1 rounded uppercase tracking-wider">Modern Art</span>
+                </div>
+                <div class="p-4">
+                    <h4 class="text-sm font-bold text-white uppercase tracking-wider">Pearl Sand Light Flake</h4>
+                    <p class="text-xs text-brandGray mt-1">Lightly populated flake showing beautiful underlying metallic silver base.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Section -->
+    <section id="service-areas" class="py-20 px-4 bg-brandCard/30 border-y border-brandBlue/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-xs font-bold tracking-widest text-brandAccent uppercase font-tech">Local Authority</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
+                    Serving Sacramento & Surrounding Areas
+                </h2>
+                <p class="text-brandGray leading-relaxed">
+                    Based in the Sacramento metro, our mobile crews travel directly to your location with diamond grinding units to restore and recoat residential garages. We offer precise local scheduling and fully custom sizing with written warranties.
+                </p>
+                
+                <!-- Call directly block -->
+                <div class="pt-2">
+                    <a href="tel:9162566232" class="inline-flex items-center gap-2 bg-brandBlue/30 hover:bg-brandBlue text-brandAccent hover:text-white px-6 py-3 rounded-xl border border-brandAccent/30 font-bold uppercase text-xs tracking-wider transition">
+                        <i class="fa-solid fa-map-location-dot"></i> Check Area Availability
+                    </a>
+                </div>
+            </div>
+
+            <!-- Service Hubs Grid -->
+            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Card 1: Sacramento -->
+                <div class="bg-brandCard border border-brandBlue/20 rounded-xl p-5 hover:border-brandAccent transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="font-tech text-xs text-white tracking-wider uppercase">Sacramento</span>
+                        <i class="fa-solid fa-circle-check text-brandAccent"></i>
+                    </div>
+                    <p class="text-[11px] text-brandGray mt-2">Active daily operations. Next-day evaluations available.</p>
+                </div>
+                
+                <!-- Card 2: Elk Grove -->
+                <div class="bg-brandCard border border-brandBlue/20 rounded-xl p-5 hover:border-brandAccent transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="font-tech text-xs text-white tracking-wider uppercase">Elk Grove</span>
+                        <i class="fa-solid fa-circle-check text-brandAccent"></i>
+                    </div>
+                    <p class="text-[11px] text-brandGray mt-2">Custom multi-flake installations & weekend bookings.</p>
+                </div>
+
+                <!-- Card 3: Folsom -->
+                <div class="bg-brandCard border border-brandBlue/20 rounded-xl p-5 hover:border-brandAccent transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="font-tech text-xs text-white tracking-wider uppercase">Folsom</span>
+                        <i class="fa-solid fa-circle-check text-brandAccent"></i>
+                    </div>
+                    <p class="text-[11px] text-brandGray mt-2">Premium metallic styling & concrete crack repairing.</p>
+                </div>
+
+                <!-- Card 4: Roseville -->
+                <div class="bg-brandCard border border-brandBlue/20 rounded-xl p-5 hover:border-brandAccent transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="font-tech text-xs text-white tracking-wider uppercase">Roseville</span>
+                        <i class="fa-solid fa-circle-check text-brandAccent"></i>
+                    </div>
+                    <p class="text-[11px] text-brandGray mt-2">Heavy traffic flake layouts for multi-car spaces.</p>
+                </div>
+
+                <!-- Card 5: Rancho Cordova -->
+                <div class="bg-brandCard border border-brandBlue/20 rounded-xl p-5 hover:border-brandAccent transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="font-tech text-xs text-white tracking-wider uppercase">Rancho Cordova</span>
+                        <i class="fa-solid fa-circle-check text-brandAccent"></i>
+                    </div>
+                    <p class="text-[11px] text-brandGray mt-2">Commercial slab preparations & high-load epoxy coatings.</p>
+                </div>
+
+                <!-- Card 6: Citrus Heights -->
+                <div class="bg-brandCard border border-brandBlue/20 rounded-xl p-5 hover:border-brandAccent transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="font-tech text-xs text-white tracking-wider uppercase">Citrus Heights</span>
+                        <i class="fa-solid fa-circle-check text-brandAccent"></i>
+                    </div>
+                    <p class="text-[11px] text-brandGray mt-2">Residential concrete grinding, floor leveling & epoxy flakes.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Interactive Price Estimator Section -->
     <section id="estimator" class="py-20 px-4 relative">
         <div class="max-w-4xl mx-auto text-center space-y-4 mb-12">
-            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Instant Calculator</span>
+            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase font-tech">Instant Calculator</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
                 Configure & Estimate Your Floor
             </h2>
@@ -287,17 +643,17 @@
                     <div>
                         <label class="block text-sm font-semibold tracking-wider text-brandSilver uppercase mb-3">1. Select Garage Layout</label>
                         <div class="grid grid-cols-3 gap-3">
-                            <button onclick="setEstimatorSize('1car', 240)" id="btnSize1" class="estimator-size-btn p-3 rounded-lg border-2 border-brandBlue bg-brandBlue/10 hover:border-brandAccent transition duration-200 text-center text-xs font-bold flex flex-col items-center justify-center gap-2">
+                            <button onclick="setEstimatorSize('1car', 240)" id="btnSize1" class="estimator-size-btn p-3 rounded-lg border-2 border-brandBlue bg-brandBlue/10 hover:border-brandAccent transition duration-200 text-center text-xs font-bold flex flex-col items-center justify-center gap-2 text-white">
                                 <i class="fa-solid fa-car text-lg"></i>
-                                <span>1-Car Garage<br><span class="text-[10px] text-brandGray">(~240 sq ft)</span></span>
+                                <span>1-Car Garage<br><span class="text-[10px] text-brandGray block mt-0.5">(~240 sq ft)</span></span>
                             </button>
-                            <button onclick="setEstimatorSize('2car', 480)" id="btnSize2" class="estimator-size-btn p-3 rounded-lg border-2 border-brandBlue bg-brandBlue/10 hover:border-brandAccent transition duration-200 text-center text-xs font-bold flex flex-col items-center justify-center gap-2">
+                            <button onclick="setEstimatorSize('2car', 480)" id="btnSize2" class="estimator-size-btn p-3 rounded-lg border-2 border-brandBlue bg-brandBlue/10 hover:border-brandAccent transition duration-200 text-center text-xs font-bold flex flex-col items-center justify-center gap-2 text-white">
                                 <div class="flex gap-1"><i class="fa-solid fa-car"></i><i class="fa-solid fa-car"></i></div>
-                                <span>2-Car Garage<br><span class="text-[10px] text-brandGray">(~480 sq ft)</span></span>
+                                <span>2-Car Garage<br><span class="text-[10px] text-brandGray block mt-0.5">(~480 sq ft)</span></span>
                             </button>
-                            <button onclick="setEstimatorSize('custom', 600)" id="btnSize3" class="estimator-size-btn p-3 rounded-lg border-2 border-brandBlue bg-brandBlue/10 hover:border-brandAccent transition duration-200 text-center text-xs font-bold flex flex-col items-center justify-center gap-2">
+                            <button onclick="setEstimatorSize('custom', 600)" id="btnSize3" class="estimator-size-btn p-3 rounded-lg border-2 border-brandBlue bg-brandBlue/10 hover:border-brandAccent transition duration-200 text-center text-xs font-bold flex flex-col items-center justify-center gap-2 text-white">
                                 <i class="fa-solid fa-ruler-combined text-lg"></i>
-                                <span>Custom Size<br><span class="text-[10px] text-brandGray">(Per Sq Ft)</span></span>
+                                <span>Custom Size<br><span class="text-[10px] text-brandGray block mt-0.5">(Per Sq Ft)</span></span>
                             </button>
                         </div>
                     </div>
@@ -386,13 +742,145 @@
         </div>
     </section>
 
+    <!-- Localized SEO / AI Content Hub -->
+    <section id="seo-hub" class="py-20 px-4 max-w-7xl mx-auto border-t border-brandBlue/10">
+        <div class="text-center space-y-4 mb-12">
+            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase font-tech">Knowledge Base</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
+                Professional Epoxy Resources
+            </h2>
+            <p class="text-brandGray max-w-xl mx-auto">
+                Explore comprehensive technical breakdowns, regional requirements, and professional floor coating strategies.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Sidebar Navigation Tabs -->
+            <div class="lg:col-span-4 flex flex-col gap-2">
+                <button onclick="switchSeoPage('sac')" id="tab_sac" class="seo-tab-btn p-4 rounded-xl text-left font-tech text-xs uppercase tracking-wider border border-brandAccent/30 bg-brandAccent/10 text-white transition duration-200">
+                    <i class="fa-solid fa-map-pin mr-2 text-brandAccent"></i> Garage Epoxy Sacramento
+                </button>
+                <button onclick="switchSeoPage('elk')" id="tab_elk" class="seo-tab-btn p-4 rounded-xl text-left font-tech text-xs uppercase tracking-wider border border-brandBlue/20 bg-brandCard/45 text-brandSilver hover:border-brandAccent transition duration-200">
+                    <i class="fa-solid fa-compass mr-2 text-brandAccent"></i> Epoxy Garage Floor Elk Grove
+                </button>
+                <button onclick="switchSeoPage('res')" id="tab_res" class="seo-tab-btn p-4 rounded-xl text-left font-tech text-xs uppercase tracking-wider border border-brandBlue/20 bg-brandCard/45 text-brandSilver hover:border-brandAccent transition duration-200">
+                    <i class="fa-solid fa-house-chimney mr-2 text-brandAccent"></i> Residential Epoxy Flooring
+                </button>
+                <button onclick="switchSeoPage('coa')" id="tab_coa" class="seo-tab-btn p-4 rounded-xl text-left font-tech text-xs uppercase tracking-wider border border-brandBlue/20 bg-brandCard/45 text-brandSilver hover:border-brandAccent transition duration-200">
+                    <i class="fa-solid fa-layer-group mr-2 text-brandAccent"></i> Garage Floor Coatings
+                </button>
+            </div>
+
+            <!-- Content Display Area -->
+            <div class="lg:col-span-8 bg-brandCard border border-brandBlue/20 rounded-2xl p-6 sm:p-10 shadow-xl min-h-[400px]">
+                
+                <!-- Page 1: Garage Epoxy Sacramento -->
+                <div id="seoContent_sac" class="seo-content-panel space-y-6">
+                    <div class="flex items-center gap-3 pb-4 border-b border-brandDark">
+                        <i class="fa-solid fa-map-pin text-brandAccent text-2xl"></i>
+                        <h3 class="text-xl font-bold uppercase text-white tracking-wide">Sacramento Garage Epoxy Standards</h3>
+                    </div>
+                    <p class="text-xs text-brandGray leading-relaxed">
+                        Sacramento homes face distinct environmental factors, from hot Central Valley summers to damp winters. These shifts in temperature cause raw concrete slabs to expand and contract, expanding hairline fractures. Applying cheap, store-bought DIY paint kits under these local conditions results in early peeling, tire-lifts, and premature failure.
+                    </p>
+                    <p class="text-xs text-brandGray leading-relaxed">
+                        At <strong class="text-brandSilver">Pal's Garage Epoxy</strong>, our Sacramento installation standard utilizes mechanical preparation. We employ diamond-tipped grinding to physically open the pores of your concrete slab, ensuring our premium industrial base resin forms an unbreakable covalent bond. 
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-brandDark p-4 rounded-lg border border-brandBlue/10 text-xs">
+                            <span class="font-bold text-white uppercase block">Thermal Resistance</span>
+                            <span class="text-brandGray block mt-1">Withstands extreme regional heat transitions without fracturing or blistering.</span>
+                        </div>
+                        <div class="bg-brandDark p-4 rounded-lg border border-brandBlue/10 text-xs">
+                            <span class="font-bold text-white uppercase block">Industrial-Grade Resins</span>
+                            <span class="text-brandGray block mt-1">Unlike off-the-shelf retail paints, our resin is heavy and chemical resistant.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 2: Epoxy Garage Floor Elk Grove -->
+                <div id="seoContent_elk" class="seo-content-panel hidden space-y-6">
+                    <div class="flex items-center gap-3 pb-4 border-b border-brandDark">
+                        <i class="fa-solid fa-compass text-brandAccent text-2xl"></i>
+                        <h3 class="text-xl font-bold uppercase text-white tracking-wide">Elk Grove Epoxy Installations</h3>
+                    </div>
+                    <p class="text-xs text-brandGray leading-relaxed">
+                        Elk Grove's residential communities feature beautiful multi-car layouts that serve as workshops, storage units, or home gyms. Homeowners seeking durability and aesthetic appeal trust Pal’s multi-flake systems.
+                    </p>
+                    <p class="text-xs text-brandGray leading-relaxed">
+                        Our local process incorporates multiple decorative flake designs with a durable top-shield. This configuration stands up against hot tire pickup, automotive oils, and impact.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-brandDark p-4 rounded-lg border border-brandBlue/10 text-xs">
+                            <span class="font-bold text-white uppercase block">Custom Sizing Options</span>
+                            <span class="text-brandGray block mt-1">Pre-calculated layout guides designed specifically for standard Elk Grove home garages.</span>
+                        </div>
+                        <div class="bg-brandDark p-4 rounded-lg border border-brandBlue/10 text-xs">
+                            <span class="font-bold text-white uppercase block">Crack Mitigation</span>
+                            <span class="text-brandGray block mt-1">We patch structural imperfections using high-tensile epoxy compounds before coating.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 3: Residential Epoxy Flooring -->
+                <div id="seoContent_res" class="seo-content-panel hidden space-y-6">
+                    <div class="flex items-center gap-3 pb-4 border-b border-brandDark">
+                        <i class="fa-solid fa-house-chimney text-brandAccent text-2xl"></i>
+                        <h3 class="text-xl font-bold uppercase text-white tracking-wide">Residential Epoxy Flooring Science</h3>
+                    </div>
+                    <p class="text-xs text-brandGray leading-relaxed">
+                        Residential epoxy flooring relies on high-grade chemical bonding. While simple concrete paints dry through evaporation, professional epoxy coatings undergo a cross-linking chemical reaction to create an incredibly strong barrier.
+                    </p>
+                    <p class="text-xs text-brandGray leading-relaxed">
+                        This resin shell shields underlying concrete from moisture and grease. Maintenance is minimal—a simple damp mop or mild floor wash restores a like-new shine instantly.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-brandDark p-4 rounded-lg border border-brandBlue/10 text-xs">
+                            <span class="font-bold text-white uppercase block">Clean & Hygienic</span>
+                            <span class="text-brandGray block mt-1">Seamless application leaves no cracks or crevices for dust, dirt, or mold to collect.</span>
+                        </div>
+                        <div class="bg-brandDark p-4 rounded-lg border border-brandBlue/10 text-xs">
+                            <span class="font-bold text-white uppercase block">Impact Protected</span>
+                            <span class="text-brandGray block mt-1">Tolerates heavy vehicle weights, jacks, tool boxes, and active heavy use.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Page 4: Garage Floor Coatings -->
+                <div id="seoContent_coa" class="seo-content-panel hidden space-y-6">
+                    <div class="flex items-center gap-3 pb-4 border-b border-brandDark">
+                        <i class="fa-solid fa-layer-group text-brandAccent text-2xl"></i>
+                        <h3 class="text-xl font-bold uppercase text-white tracking-wide">Multi-Layer Floor Coatings Breakdown</h3>
+                    </div>
+                    <p class="text-xs text-brandGray leading-relaxed">
+                        A durable coating requires a detailed multi-step process rather than a single coat of paint. Pal’s utilizes a systematic multi-layer application method for lasting results.
+                    </p>
+                    <p class="text-xs text-brandGray leading-relaxed">
+                        This starts with an oil-blocking primer, followed by a thick self-leveling color base layer. We then saturate the surface with colorful vinyl flakes before applying a durable polyaspartic topcoat that resists fading over time.
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div class="bg-brandDark p-4 rounded-lg border border-brandBlue/10 text-xs">
+                            <span class="font-bold text-white uppercase block">UV-Stable Topcoat</span>
+                            <span class="text-brandGray block mt-1">Won't yellow or fade from sunlight near garage doors.</span>
+                        </div>
+                        <div class="bg-brandDark p-4 rounded-lg border border-brandBlue/10 text-xs">
+                            <span class="font-bold text-white uppercase block">High Coefficient of Friction</span>
+                            <span class="text-brandGray block mt-1">Injected slip-resistant grit provides steady footing under wet or rainy conditions.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Brand Value & Video Highlight Section -->
     <section class="py-20 px-4 bg-brandCard/30 border-t border-brandBlue/10">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <!-- Quality work principles info card -->
             <div class="lg:col-span-6 space-y-6">
-                <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Pal's Guarantee</span>
+                <span class="text-xs font-bold tracking-widest text-brandAccent uppercase font-tech">Pal's Guarantee</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
                     One Job At A Time. Best Results.
                 </h2>
@@ -457,10 +945,73 @@
         </div>
     </section>
 
+    <!-- Interactive FAQ Section -->
+    <section id="faqs" class="py-20 px-4 max-w-4xl mx-auto border-t border-brandBlue/10">
+        <div class="text-center space-y-4 mb-12">
+            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase font-tech">Frequently Asked Questions</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
+                Clear Answers Built On Trust
+            </h2>
+            <p class="text-brandGray max-w-xl mx-auto">
+                Got questions about the installation process, drying times, or concrete preparations? We've got you covered.
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ 1 -->
+            <div class="bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden transition duration-200">
+                <button onclick="toggleFaq(1)" class="w-full p-5 text-left flex justify-between items-center text-white hover:text-brandAccent transition">
+                    <span class="font-tech text-xs sm:text-sm uppercase tracking-wider">How long does epoxy flooring last?</span>
+                    <i id="faqIcon_1" class="fa-solid fa-chevron-down text-brandAccent transition duration-300"></i>
+                </button>
+                <div id="faqAnswer_1" class="hidden p-5 pt-0 border-t border-brandDark text-xs text-brandGray leading-relaxed space-y-2">
+                    <p>Our residential multi-flake epoxy installations typically last **15 to 20+ years** when applied to properly prepared slabs.</p>
+                    <p>Because we use diamond-grinding to prepare the surface and apply a UV-stable polyaspartic topcoat, our floors resist peeling, yellowing, and hot tire pickup under normal residential use.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden transition duration-200">
+                <button onclick="toggleFaq(2)" class="w-full p-5 text-left flex justify-between items-center text-white hover:text-brandAccent transition">
+                    <span class="font-tech text-xs sm:text-sm uppercase tracking-wider">How long before I can park on it?</span>
+                    <i id="faqIcon_2" class="fa-solid fa-chevron-down text-brandAccent transition duration-300"></i>
+                </button>
+                <div id="faqAnswer_2" class="hidden p-5 pt-0 border-t border-brandDark text-xs text-brandGray leading-relaxed space-y-2">
+                    <p>You can walk on the floor within **24 hours** after the topcoat is applied.</p>
+                    <p>We recommend waiting **72 hours** (3 full days) before parking vehicles or moving heavy toolboxes back in, ensuring the floor is completely cured and ready to support heavy loads.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden transition duration-200">
+                <button onclick="toggleFaq(3)" class="w-full p-5 text-left flex justify-between items-center text-white hover:text-brandAccent transition">
+                    <span class="font-tech text-xs sm:text-sm uppercase tracking-wider">Do you repair cracks and concrete damage?</span>
+                    <i id="faqIcon_3" class="fa-solid fa-chevron-down text-brandAccent transition duration-300"></i>
+                </button>
+                <div id="faqAnswer_3" class="hidden p-5 pt-0 border-t border-brandDark text-xs text-brandGray leading-relaxed space-y-2">
+                    <p>**Yes, absolutely.** We repair pits, spalls, oil stains, and cracks before applying the coating.</p>
+                    <p>We use high-strength epoxy patching compounds to fill cracks and level uneven spots. Once ground smooth, the repairs are permanently covered by the base coat, creating a seamless finish.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="bg-brandCard border border-brandBlue/20 rounded-xl overflow-hidden transition duration-200">
+                <button onclick="toggleFaq(4)" class="w-full p-5 text-left flex justify-between items-center text-white hover:text-brandAccent transition">
+                    <span class="font-tech text-xs sm:text-sm uppercase tracking-wider">What is included in the free estimate?</span>
+                    <i id="faqIcon_4" class="fa-solid fa-chevron-down text-brandAccent transition duration-300"></i>
+                </button>
+                <div id="faqAnswer_4" class="hidden p-5 pt-0 border-t border-brandDark text-xs text-brandGray leading-relaxed space-y-2">
+                    <p>Our estimates are **100% transparent and comprehensive** with no hidden fees.</p>
+                    <p>Each quote covers diamond grinding prep, crack and spall repairs, primer application, industrial base resin, full-coverage decorative chips, and the final UV-stable protective topcoat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Booking & Lead Capture Section -->
     <section id="contact" class="py-20 px-4 relative">
         <div class="max-w-4xl mx-auto text-center space-y-4 mb-12">
-            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase">Secure Your Slot</span>
+            <span class="text-xs font-bold tracking-widest text-brandAccent uppercase font-tech">Secure Your Slot</span>
             <h2 class="text-3xl sm:text-4xl font-extrabold uppercase text-white tracking-wide">
                 Get Your Free In-Person Estimate
             </h2>
@@ -581,8 +1132,9 @@
                 <h4 class="font-tech text-white text-sm tracking-wider uppercase">Navigate</h4>
                 <ul class="space-y-2 text-sm text-brandGray">
                     <li><a href="#home" class="hover:text-brandAccent transition">Home</a></li>
-                    <li><a href="#branding-showcase" class="hover:text-brandAccent transition">Our Promise</a></li>
+                    <li><a href="#reviews" class="hover:text-brandAccent transition">Reviews</a></li>
                     <li><a href="#gallery" class="hover:text-brandAccent transition">Transforms Gallery</a></li>
+                    <li><a href="#projects" class="hover:text-brandAccent transition">Our Styles</a></li>
                     <li><a href="#estimator" class="hover:text-brandAccent transition">Pricing Calculator</a></li>
                     <li><a href="#contact" class="hover:text-brandAccent transition">Book Estimate</a></li>
                 </ul>
@@ -692,8 +1244,10 @@
 
             // Sync dynamic dimensions on resize
             function resizeBeforeImg() {
-                const containerWidth = beforeAfterSlider.offsetWidth;
-                beforeImg.style.width = `${containerWidth}px`;
+                if (beforeAfterSlider) {
+                    const containerWidth = beforeAfterSlider.offsetWidth;
+                    beforeImg.style.width = `${containerWidth}px`;
+                }
             }
 
             // Track range inputs
@@ -819,6 +1373,40 @@
             document.getElementById('leadCaptureForm').reset();
             document.getElementById('formSuccessAlert').classList.add('hidden');
             document.getElementById('formEstimateAlert').classList.add('hidden');
+        }
+
+        // FAQ Interactive Toggles
+        function toggleFaq(id) {
+            const faqAns = document.getElementById(`faqAnswer_${id}`);
+            const faqIcon = document.getElementById(`faqIcon_${id}`);
+            if (faqAns.classList.contains('hidden')) {
+                faqAns.classList.remove('hidden');
+                faqIcon.classList.add('rotate-180');
+            } else {
+                faqAns.classList.add('hidden');
+                faqIcon.classList.remove('rotate-180');
+            }
+        }
+
+        // Localized SEO Tab switching
+        function switchSeoPage(pageId) {
+            // Hide all panels
+            document.querySelectorAll('.seo-content-panel').forEach(panel => {
+                panel.classList.add('hidden');
+            });
+            // Show target panel
+            document.getElementById(`seoContent_${pageId}`).classList.remove('hidden');
+
+            // Reset tab styling
+            document.querySelectorAll('.seo-tab-btn').forEach(btn => {
+                btn.classList.remove('border-brandAccent/30', 'bg-brandAccent/10', 'text-white');
+                btn.classList.add('border-brandBlue/20', 'bg-brandCard/45', 'text-brandSilver');
+            });
+
+            // Set active button style
+            const activeBtn = document.getElementById(`tab_${pageId}`);
+            activeBtn.classList.remove('border-brandBlue/20', 'bg-brandCard/45', 'text-brandSilver');
+            activeBtn.classList.add('border-brandAccent/30', 'bg-brandAccent/10', 'text-white');
         }
 
         // Run setup immediately on system load
